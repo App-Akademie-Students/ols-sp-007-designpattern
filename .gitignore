@@ -19,3 +19,6 @@ __pycache__/
 
 # JavaScript
 node_modules/
+
+# Dart
+.dart_tool/

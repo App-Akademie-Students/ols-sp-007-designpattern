@@ -1,6 +1,6 @@
-# ols-sp-007 – Design Patterns (Java · Python · JavaScript)
+# ols-sp-007 – Design Patterns (Java · Python · JavaScript · Dart)
 
-Jedes Pattern wird später in allen drei Sprachen als eigenes, einfaches Projekt umgesetzt –
+Jedes Pattern wird später in allen vier Sprachen als eigenes, einfaches Projekt umgesetzt –
 ohne Build-Tools (kein Maven, kein npm, kein pip).
 
 ```
@@ -11,15 +11,18 @@ ohne Build-Tools (kein Maven, kein npm, kein pip).
 ├── python/
 │   └── 00-vorlage/
 │       └── main.py
-└── javascript/
+├── javascript/
+│   └── 00-vorlage/
+│       └── main.js
+└── dart/
     └── 00-vorlage/
-        └── main.js
+        └── main.dart
 ```
 
 ## Konvention
 
-- Ein Ordner pro Projekt, in allen drei Sprachen mit **gleichem Namen**, z. B. `01-singleton`.
-- Einstiegspunkt: `src/Main.java` (Java), `main.py` (Python), `main.js` (JavaScript).
+- Ein Ordner pro Projekt, in allen vier Sprachen mit **gleichem Namen**, z. B. `01-singleton`.
+- Einstiegspunkt: `src/Main.java` (Java), `main.py` (Python), `main.js` (JavaScript), `main.dart` (Dart).
 - Neues Projekt = Ordner `00-vorlage` kopieren und umbenennen.
 
 ## Patterns
@@ -39,6 +42,7 @@ ohne Build-Tools (kein Maven, kein npm, kein pip).
 | Java (JDK) | ≥ 21    | `java -version` und `javac -version` |
 | Python     | ≥ 3.11  | `python --version`                |
 | Node.js    | ≥ 20    | `node --version`                  |
+| Dart SDK   | ≥ 3.0   | `dart --version`                  |
 
 **JDK installieren:** z. B. [Eclipse Temurin](https://adoptium.net/) – im Installer
 „Set JAVA_HOME“ und „Add to PATH“ aktivieren. Danach Terminal bzw. VS Code **neu starten**.
@@ -70,4 +74,10 @@ python main.py
 ```bash
 cd javascript/00-vorlage
 node main.js
+```
+
+**Dart** (SDK ≥ 3.0)
+```bash
+cd dart/00-vorlage
+dart run main.dart
 ```
