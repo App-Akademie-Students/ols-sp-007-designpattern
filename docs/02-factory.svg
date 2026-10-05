@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 870 500" width="870" height="500" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2937">
+  <defs>
+    <marker id="pfeil" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1,1 L10,6 L1,11" fill="none" stroke="#374151" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <rect width="870" height="500" fill="#ffffff"/>
+
+  <!-- Aufrufer -->
+  <rect x="30" y="205" width="140" height="50" fill="#eef4ff" stroke="#374151" stroke-width="1.5"/>
+  <text x="100" y="235" text-anchor="middle" font-weight="bold" font-size="14">Main</text>
+
+  <!-- Factory -->
+  <rect x="250" y="40" width="330" height="80" fill="#fdecef" stroke="#374151" stroke-width="1.5"/>
+  <line x1="250" y1="72" x2="580" y2="72" stroke="#374151"/>
+  <text x="415" y="62" text-anchor="middle" font-weight="bold" font-size="14">NotificationFactory</text>
+  <text x="262" y="101">+ create(channel: String): Notification</text>
+
+  <!-- Produkt-Interface -->
+  <rect x="300" y="190" width="230" height="85" fill="#fff7e0" stroke="#374151" stroke-width="1.5"/>
+  <line x1="300" y1="238" x2="530" y2="238" stroke="#374151"/>
+  <text x="415" y="210" text-anchor="middle" font-style="italic">«interface»</text>
+  <text x="415" y="229" text-anchor="middle" font-weight="bold" font-size="14">Notification</text>
+  <text x="312" y="262">+ send(message: String)</text>
+
+  <!-- Main fragt die Factory und nutzt nur das Interface -->
+  <path d="M100,205 L100,80 L250,80" fill="none" stroke="#374151" stroke-width="1.5" marker-end="url(#pfeil)"/>
+  <text x="112" y="72" font-size="12">create(channel)</text>
+  <line x1="170" y1="230" x2="300" y2="230" stroke="#374151" stroke-width="1.5" marker-end="url(#pfeil)"/>
+  <text x="235" y="222" text-anchor="middle" font-size="12">send()</text>
+
+  <!-- Konkrete Produkte implementieren das Interface -->
+  <path d="M415,275 L403,289 L427,289 Z" fill="#ffffff" stroke="#374151" stroke-width="1.5"/>
+  <path d="M415,289 L415,320 M295,320 L675,320 M295,320 L295,370 M485,320 L485,370 M675,320 L675,370" fill="none" stroke="#374151" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <rect x="195" y="350" width="580" height="90" rx="10" fill="none" stroke="#9ca3af" stroke-dasharray="3 4"/>
+
+  <rect x="210" y="370" width="170" height="50" fill="#eaf7ee" stroke="#374151" stroke-width="1.5"/>
+  <text x="295" y="400" text-anchor="middle" font-weight="bold">EmailNotification</text>
+
+  <rect x="400" y="370" width="170" height="50" fill="#eaf7ee" stroke="#374151" stroke-width="1.5"/>
+  <text x="485" y="400" text-anchor="middle" font-weight="bold">SmsNotification</text>
+
+  <rect x="590" y="370" width="170" height="50" fill="#eaf7ee" stroke="#374151" stroke-width="1.5"/>
+  <text x="675" y="400" text-anchor="middle" font-weight="bold">PushNotification</text>
+
+  <!-- Die Factory erzeugt die konkreten Objekte -->
+  <path d="M580,80 L820,80 L820,395 L775,395" fill="none" stroke="#374151" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#pfeil)"/>
+  <text x="700" y="72" text-anchor="middle" font-size="12" font-style="italic">«erzeugt»</text>
+
+  <text x="30" y="480" font-size="12" fill="#6b7280">Main kennt nur die Factory und das Interface – welche Klasse entsteht, entscheidet allein die Factory.</text>
+</svg>
